@@ -7,3 +7,14 @@ plugins {
     alias(libs.plugins.kmpNativeCoroutines) apply false
     alias(libs.plugins.ksp) apply false
 }
+buildscript {
+    repositories {
+        mavenCentral()
+        maven(url = uri("https://jitpack.io"))
+        google()
+    }
+
+    dependencies {
+
+    }
+}

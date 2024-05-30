@@ -60,3 +60,6 @@ android {
         minSdk = 24
     }
 }
+dependencies {
+    implementation(libs.androidx.lifecycle.livedata.core.ktx)
+}
