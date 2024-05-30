@@ -9,10 +9,10 @@ interface TrainApi {
     suspend fun getData(): List<TrainObject>
 }
 
-class KtorMuseumApi(private val client: HttpClient) : TrainApi {
+class KtorTrainApi(private val client: HttpClient) : TrainApi {
     companion object {
         private const val API_URL =
-            "https://raw.githubusercontent.com/vov4ik-v/TrainApp/master/TrainData.json?token=GHSAT0AAAAAACQU7XABXUGV7XB3CFVBEZW4ZSU7ALA"// TODO:Change
+            "https://raw.githubusercontent.com/vov4ik-v/TrainApp/master/TrainData.json"// TODO:Change
     }
 
     override suspend fun getData(): List<TrainObject> {

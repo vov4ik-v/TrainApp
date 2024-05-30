@@ -1,5 +1,3 @@
-import org.jetbrains.compose.ExperimentalComposeLibrary
-
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
@@ -21,16 +19,18 @@ kotlin {
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.viewmodel.compose)
             implementation(libs.androidx.navigation.compose)
+            implementation(libs.mpandroidchart)
             implementation(libs.koin.androidx.compose)
-            implementation(libs.coil.compose)
         }
         commonMain.dependencies {
+            implementation(libs.play.services.maps)
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
             implementation(projects.shared)
         }
     }
@@ -68,4 +68,7 @@ android {
     dependencies {
         debugImplementation(libs.androidx.compose.ui.tooling)
     }
+}
+dependencies {
+    implementation(libs.androidx.constraintlayout)
 }

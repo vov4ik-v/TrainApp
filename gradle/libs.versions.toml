@@ -9,9 +9,14 @@ compose-plugin = "1.6.2"
 kmmViewmodel = "1.0.0-ALPHA-19"
 kmpNativeCoroutines = "1.0.0-ALPHA-28"
 koin = "3.5.3"
+koinAndroidxViewmodel = "3.2.0"
 kotlin = "1.9.23"
 ksp = "1.9.23-1.0.20"
 ktor = "2.3.10"
+constraintlayout = "2.1.4"
+mpandroidchart = "v3.1.0"
+playServicesMaps = "18.2.0"
+lifecycleLivedataCoreKtx = "2.8.0"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
@@ -22,12 +27,17 @@ androidx-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 kmm-viewmodel = { module = "com.rickclephas.kmm:kmm-viewmodel-core", version.ref = "kmmViewmodel" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-androidx-viewmodel = { module = "io.insert-koin:koin-androidx-viewmodel", version.ref = "koinAndroidxViewmodel" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
+androidx-lifecycle-livedata-core-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-core-ktx", version.ref = "lifecycleLivedataCoreKtx" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

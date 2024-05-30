@@ -1,7 +1,7 @@
 package com.jetbrains.kmpapp.di
 
 import com.jetbrains.kmpapp.data.InMemoryMuseumStorage
-import com.jetbrains.kmpapp.data.KtorMuseumApi
+import com.jetbrains.kmpapp.data.KtorTrainApi
 import com.jetbrains.kmpapp.data.TrainApi
 import com.jetbrains.kmpapp.data.TrainRepository
 import com.jetbrains.kmpapp.data.TrainStorage
@@ -19,13 +19,12 @@ val dataModule = module {
         val json = Json { ignoreUnknownKeys = true }
         HttpClient {
             install(ContentNegotiation) {
-                // TODO Fix API so it serves application/json
                 json(json, contentType = ContentType.Any)
             }
         }
     }
 
-    single<TrainApi> { KtorMuseumApi(get()) }
+    single<TrainApi> { KtorTrainApi(get()) }
     single<TrainStorage> { InMemoryMuseumStorage() }
     single {
         TrainRepository(get(), get()).apply {
@@ -33,6 +32,7 @@ val dataModule = module {
         }
     }
 }
+
 
 fun initKoin() = initKoin(emptyList())
 

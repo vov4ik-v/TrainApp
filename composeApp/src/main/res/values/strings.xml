@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="defaultDate">Date: 2024–05-29</string>
+    <string name="defaultSpeed">Speed: 0</string>
+    <string name="statisticText">Statistic</string>
+</resources>
